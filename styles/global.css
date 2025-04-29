@@ -2,9 +2,143 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+ul {
+  list-style-position: inside;
+}
+hr {
+  margin-bottom: 10px;
+}
+a {
+  color: #4886f8;
+}
+p {
+  line-height: 1.5em;
+}
+header h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 20px;
 }
 
 /*title text style*/
 /* the font-family 'JetBrains Mono', has been linked
  * and is available for your use
  * */
+
+ body {
+  padding-top: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #35363A;
+  font-weight: 600;
+  
+}
+header, main {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.header-top .logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 7px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.logo img{
+  position: absolute;
+  bottom: -5px;
+  left: 25%;
+}
+.header-top .contact {
+  width: 520px;
+  height: 90px;
+  border-radius: 20px;
+  background-color: #35363A;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  font-weight: 600;
+}
+.summary {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+}
+main section, main .third {
+  margin-bottom: 25px;
+}
+.third {
+  display: flex;
+  justify-content: space-between;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: xx-large;
+}
+form {
+  justify-self: center;
+}
+.contact div {
+  margin-bottom: 20px;
+}
+form input, form textarea {
+  font: inherit;
+  padding: 5px;
+}
+form label {
+  display: block;
+  margin-bottom: 6px;
+}
+form input {
+  width: 100%;
+  height: 35px;
+}
+.form-btn {
+  width: 150px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #4CAF50;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*  Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #35363A;
+    color: white;
+    font-weight: normal;
+  }
+  .header-top .logo {
+    background-color: white;
+    box-shadow: none;
+  }
+  .header-top .contact {
+    background-color: white;
+    color: black;
+  }
+}
