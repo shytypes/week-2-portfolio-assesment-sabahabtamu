@@ -14,15 +14,15 @@ function display(e) {
     h2.innerHTML = `<h2>Thank you for your Message!</h2>`;
 
     display.innerHTML = `
-        <h3>First Name: ${fName.value}</h3>
-        <h3>Last Name: ${lName.value}</h3>
-        <h3>Email Address: ${email.value}</h3>
-        <h3>Message: ${message.value}</h3>`
+        <h3>First Name: <span class="display-value">${fName.value}</span></h3>
+        <h3>Last Name: <span class="display-value">${lName.value}</span></h3>
+        <h3>Email Address: <span class="display-value">${email.value}</span></h3>
+        <h3>Message: <span class="display-value">${message.value}</span></h3>`
 
         const headings = display.querySelectorAll('h3');
 
         headings.forEach(h3 => {
-        h3.style.fontSize = '24px';
+        h3.style.fontSize = '26px';
         h3.style.fontFamily = 'cursive'
         h3.style.margin = '12px 0';
         });

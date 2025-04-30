@@ -126,6 +126,12 @@ form input {
   cursor: pointer;
 }
 
+.display-value {
+  font-size: 22px;
+  margin-top: 4px;
+  color: rgba(52, 51, 51, 0.616);
+}
+
 /*  Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -140,5 +146,8 @@ form input {
   .header-top .contact {
     background-color: white;
     color: black;
+  }
+  .display-value {
+    color: #cecdcd;
   }
 }
