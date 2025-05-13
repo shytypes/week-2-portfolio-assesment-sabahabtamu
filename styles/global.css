@@ -1,96 +1,250 @@
-/* remove default browser spacing*/
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-margin-top: 4.7rem;
+  list-style: none;
   text-decoration: none;
 }
-ul {
-  list-style-position: inside;
+
+/* Variables */
+
+:root {
+  --brand-color: #442ee5 ;
+  --text-strong: #0c082b;
+  --text-weak: #2e2a4d;
+  --stroke-strong: #5c549c;
+  --stroke-weak: #bbb9cb;
+  --fill: #d6d5de;
+  --divider: 1px solid var(--stroke-weak);
 }
-hr {
-  margin-bottom: 10px;
-}
-a {
-  color: #4886f8;
-}
-p {
-  line-height: 1.5em;
-}
-header h1 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
+
 h2 {
-  font-size: 20px;
+  font-size:2rem;
 }
 
-/*title text style*/
-/* the font-family 'JetBrains Mono', has been linked
- * and is available for your use
- * */
-
- body {
-  padding-top: 20px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  min-height: 100vh;
+body {
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Open Sans",sans-serif;
   background-color: #fff;
-  color: #35363A;
-  font-weight: 600;
-  
-}
-header, main {
+  overflow-x: hidden;
+  color: var(--text-weak);
+} 
+
+.header {
   width: 100%;
-  max-width: 700px;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(0.5rem);
   display: flex;
-  flex-direction: column;
-  align-items: space-between;
-}
-.header-top {
-  display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center; 
+  z-index: 10;
+  border-bottom: var(--divider);
 }
-.header-top .logo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  box-shadow: 0 7px 6px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
+.header__content .header__title {
+  font-size: 40px;
+  white-space: nowrap;
+  color: var(--text-strong);
+  font-weight: bold;
 }
-.logo img{
+
+.header .menu img {
   position: absolute;
-  bottom: -5px;
-  left: 25%;
+  right: 1rem;
+  top: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
 }
-.header-top .contact {
-  width: 520px;
-  height: 90px;
-  border-radius: 20px;
-  background-color: #35363A;
-  color: white;
+
+.main {
+  width: 100%;
+  padding: 32px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.home {
+  margin: 72px 72px 0px 72px;
+}
+.home .brief {
+  padding: 40px;
+  display: flex;
+  justify-self: center;
+}
+.home__content {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  padding-left: 20px;
-  font-weight: 600;
 }
-.summary {
+
+.home__content h1 {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+h1 span {
+  white-space: nowrap;
+}
+
+p {
+  line-height: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 275px;
+  font-size: 1rem;
   text-align: center;
-  max-width: 600px;
-  margin: 20px auto;
+  padding: .7rem 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 1.5rem;
+  background-color: var(--brand-color);
+  cursor: pointer;
+  transition: all .2s;
 }
-main section, main .third {
+
+.btn:hover{
+  background: transparent;
+  color: var(--brand-color);
+  border: 1px solid var(--brand-color);
+  transform: scale(1.1);
+} 
+
+.home img {
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-start;
+  margin: 24px 0;
+}
+
+.socials a {
+  margin: .3rem;
+  padding: .3rem;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--brand-color);
+  border-radius: 50%;
+  transition: .3s;
+}
+.socials a i {
+  font-size: 1.5rem;
+  color: var(--brand-color);
+}
+
+.socials a:hover {
+  transform: Scale(1.2);
+  transition: .2s;
+  background-color: var(--brand-color);
+}
+.socials a:hover i {
+  color: #fff;
+}
+
+.about {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.about h1 {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__content h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+.about__content p {
+  line-height: 1.5rem;
+}
+.about__content section {
+  width: 75%;
+  margin-bottom: 32px;
+  border: 1px solid var(--stroke-weak);
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.projects {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 72px;
+}
+.projects h1 {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+.projects p {
+  line-height: 1.5rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.projects__container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 48px;
+}
+.projects .project2 {
   margin-bottom: 25px;
 }
-.third {
-  display: flex;
-  justify-content: space-between;
+.projects__container div {
+  width: 50%;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+.projects img {
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+  margin-bottom: 72px;
 }
 .contact h2 {
   text-align: center;
@@ -131,23 +285,21 @@ form input {
   margin-top: 4px;
   color: rgba(52, 51, 51, 0.616);
 }
+.display-form {
+  margin-bottom: 72px;
+}
+footer {
+  padding: 1rem 1rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(0.5rem);
+  border-top: var(--divider);
+  text-align: center;
+}
 
-/*  Dark Mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #35363A;
-    color: white;
-    font-weight: normal;
-  }
-  .header-top .logo {
-    background-color: white;
-    box-shadow: none;
-  }
-  .header-top .contact {
-    background-color: white;
-    color: black;
-  }
-  .display-value {
-    color: #cecdcd;
-  }
+footer span {
+  font-size: 1.5rem;
 }
